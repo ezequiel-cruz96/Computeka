@@ -1,0 +1,44 @@
+footer{
+    width: 100%;
+    margin-top: 50vh;
+    height: 150px;
+    background-color: #fd611a;
+}
+
+.images-container {
+    width:24px;
+    height: 24px;
+}
+
+.footer-container{
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-title{
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.bb-column{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.images-footer{   cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+}
+
+.afip-image{
+    width: 100px;
+    height: 100px;
+}
