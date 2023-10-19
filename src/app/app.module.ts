@@ -20,16 +20,15 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { TableModule } from 'primeng/table';
-
-
-
+import { ProductsComponent } from '../components/products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
