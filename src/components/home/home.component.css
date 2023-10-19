@@ -18,3 +18,33 @@
     margin-top: 50px;
     margin-left: 140px;
 }
+
+.notebook-image{
+    width: 100px;
+    height: 100px;
+    margin-left: 100px;
+}
+
+.notebook-wrapper{
+    display: flex;
+    width: 80vw;
+}
+
+.title-second{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: .18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color:#4e4d4d; ;
+    border-bottom: 2px solid #fd611a;;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.description-notebook{
+    margin-left: 50px;
+}

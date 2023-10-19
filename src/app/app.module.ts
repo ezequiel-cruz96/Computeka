@@ -19,6 +19,8 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
 
 import { AngularFireModule } from '@angular/fire/compat';
+import { TableModule } from 'primeng/table';
+
 
 
 
@@ -38,7 +40,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     ButtonModule,
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideFirestore(() => getFirestore()),
-    AngularFireModule
+    AngularFireModule,
+    TableModule
     
   ],
   providers: [],
