@@ -41,10 +41,28 @@
     color:#4e4d4d; ;
     border-bottom: 2px solid #fd611a;;
     padding-bottom: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 50px;
 }
 
 .description-notebook{
     margin-left: 50px;
+}
+
+.button-home{
+    margin-left: 50px;
+    border-radius: 8px;
+    border: 2px solid #fd611a;
+    color: #fd611a;
+    background-color: white;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .18px;
+    text-transform: uppercase;
+}
+.button-wrapper{
+    display: flex;
+    justify-content: end;
 }

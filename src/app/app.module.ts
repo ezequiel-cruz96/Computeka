@@ -13,14 +13,15 @@ import { FooterComponent } from 'src/components/footer/footer.component';
 
 import { TableModule } from 'primeng/table';
 import { ProductsComponent } from '../components/products/products.component';
-
+import { DetailComponent } from 'src/components/detail/detail.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    ProductsComponent
+    ProductsComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,
