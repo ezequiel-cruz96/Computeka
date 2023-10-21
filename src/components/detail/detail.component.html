@@ -15,25 +15,28 @@
                     <p class="sub-title-detail">Equipos y Notebooks > Notebooks > Thunderobot
                     </p>
                     <div class="line"></div>
-                    <div class="code-detail">Codigo</div>
+                    <div ><span class="code-detail">{{product.code}} ID:{{product.id}}</span></div>
                     <div class="line"></div>
-                    <p class="price-detail">Precio especial <span>$ {{product.price}}</span></p>
+                    <p class="price-detail">Precio especial <span>${{ formatedPrice(product.price)}}</span></p>
                     <div class="quotas-detail">
                         <img class="image-logo" src="./assets/images/logo.png" alt="logo">
-                        <div class="quotas-title">12 Cuotas de: <span></span> {{product.price /12}}</div>
+                        <div class="quotas-title">12 Cuotas de: <span>${{ roundPrice(product.price) }}</span></div>
                         <div class="quotas-subtitle">Precio de lista {{product.price *2}}</div>
                     </div>
                     <div class="line"></div>
                     <div class="warranty-title">
-                        <div>Garantia - 12 meses</div>
-                        <div> Stock disponible</div>
-                        <div> Envios a todo el pais</div>
+                        <div class="icon-detail"><i class="pi pi-shield" style="font-size: 1rem"></i> 
+                            Garantia - 12 meses
+                        </div>
+                        <div class="icon-detail"><i class="pi pi-check" style="font-size: 1rem"></i> 
+                            Stock disponible
+                        </div>
+                        <div class="icon-detail"><i class="pi pi-truck" style="font-size: 1rem"></i> 
+                            Envios a todo el pais</div>
                     </div>
                     <div class="line"></div>
-                    <button>Comprar</button>
+                    <button class="button-detail">Comprar producto</button>
                 </div>
-            
-<!--                 <p>{{product.characteristics}}</p>
- -->            </section>
+             </section>
         </div>
     </div>
