@@ -14,6 +14,8 @@ import { FooterComponent } from 'src/components/footer/footer.component';
 import { TableModule } from 'primeng/table';
 import { ProductsComponent } from '../components/products/products.component';
 import { DetailComponent } from 'src/components/detail/detail.component';
+import { HelpviewComponent } from 'src/components/helpview/helpview.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,7 @@ import { DetailComponent } from 'src/components/detail/detail.component';
     FooterComponent,
     ProductsComponent,
     DetailComponent,
+    HelpviewComponent,
   ],
   imports: [
     BrowserModule,
