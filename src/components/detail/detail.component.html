@@ -1,13 +1,25 @@
     <div class="detail" *ngFor="let product of filterProducts">
         <div class="detail-container">
             <section>
+            <div>  
                 <p-image
-                [preview]="true"
-                class="notebook-image"
-                [src]=product.images
-                alt="logo"
-              >
-            </p-image>
+                    [preview]="true"
+                    class="notebook-image"
+                    [src]=product.images
+                    alt="logo"
+                  >
+                </p-image>
+                <div class="images-carousel">
+                    <p-image
+                    *ngFor="let imageDetail of product.detailImage"
+                    [preview]="true"
+                    class="detai-image"
+                    [src]=imageDetail.image
+                    alt="logo"
+                  >
+                </p-image>
+                </div>
+            </div>
             </section>
             <section>
                 <div>

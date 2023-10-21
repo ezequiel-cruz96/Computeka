@@ -95,4 +95,18 @@
     padding: 8px;
 }
 
+.images-carousel{
+    display: flex;
+    gap:80px ;
+    margin-right: 100px;
+    margin-top: 16px;
+}
+
+.detai-image{
+    max-width: 80px;
+}
+
+
+
+
 
