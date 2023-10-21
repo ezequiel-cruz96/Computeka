@@ -15,6 +15,7 @@ import { TableModule } from 'primeng/table';
 import { ProductsComponent } from '../components/products/products.component';
 import { DetailComponent } from 'src/components/detail/detail.component';
 import { HelpviewComponent } from 'src/components/helpview/helpview.component';
+import { UsviewComponent } from 'src/components/usview/usview.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HelpviewComponent } from 'src/components/helpview/helpview.component';
     ProductsComponent,
     DetailComponent,
     HelpviewComponent,
+    UsviewComponent,
   ],
   imports: [
     BrowserModule,

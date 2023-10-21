@@ -1,0 +1,32 @@
+.section-about-us {
+    padding: 60px 0;
+  }
+  
+  .section-about-us h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .section-about-us p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+  }
+
+  .image-logo{
+    width: 400px;
+  }
+
+  .title{
+    color: #ff6600;
+  }
+  
