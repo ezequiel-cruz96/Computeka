@@ -11,14 +11,6 @@ import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { FooterComponent } from 'src/components/footer/footer.component';
 
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-
-import { environment } from '../enviroment/enviroment'
-
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-
-
-import { AngularFireModule } from '@angular/fire/compat';
 import { TableModule } from 'primeng/table';
 import { ProductsComponent } from '../components/products/products.component';
 
@@ -37,9 +29,6 @@ import { ProductsComponent } from '../components/products/products.component';
     BrowserAnimationsModule,
     CarouselModule,
     ButtonModule,
-    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    provideFirestore(() => getFirestore()),
-    AngularFireModule,
     TableModule
     
   ],
