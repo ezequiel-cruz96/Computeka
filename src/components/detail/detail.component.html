@@ -1,3 +1,39 @@
-<div>
-    <p>{{idParams}}</p>
-</div>
+    <div class="detail" *ngFor="let product of filterProducts">
+        <div class="detail-container">
+            <section>
+                <p-image
+                [preview]="true"
+                class="notebook-image"
+                [src]=product.images
+                alt="logo"
+              >
+            </p-image>
+            </section>
+            <section>
+                <div>
+                    <p class="title-detail">{{product.name}}</p>
+                    <p class="sub-title-detail">Equipos y Notebooks > Notebooks > Thunderobot
+                    </p>
+                    <div class="line"></div>
+                    <div class="code-detail">Codigo</div>
+                    <div class="line"></div>
+                    <p class="price-detail">Precio especial <span>$ {{product.price}}</span></p>
+                    <div class="quotas-detail">
+                        <img class="image-logo" src="./assets/images/logo.png" alt="logo">
+                        <div class="quotas-title">12 Cuotas de: <span></span> {{product.price /12}}</div>
+                        <div class="quotas-subtitle">Precio de lista {{product.price *2}}</div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="warranty-title">
+                        <div>Garantia - 12 meses</div>
+                        <div> Stock disponible</div>
+                        <div> Envios a todo el pais</div>
+                    </div>
+                    <div class="line"></div>
+                    <button>Comprar</button>
+                </div>
+            
+<!--                 <p>{{product.characteristics}}</p>
+ -->            </section>
+        </div>
+    </div>

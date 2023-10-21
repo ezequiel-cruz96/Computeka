@@ -1,0 +1,70 @@
+.detail{
+    display: flex;
+    justify-content: center;
+}
+
+.detail-container{
+    display: flex;
+    gap:30px;
+    margin-top: 30px;
+}
+
+.title-detail{
+    width: 410px;
+    font: 400 24px/30px Montserrat,sans-serif;
+}
+
+.sub-title-detail{
+    width: 410px;
+    font-family: Montserrat,sans-serif;
+    font-size: 14px;
+}
+
+.price-detail{
+    font: 500 32px/36px Montserrat,sans-serif!important;
+    color: #4675b9!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    width: 100%;
+    border-bottom: solid 1px rgb(189, 187, 187);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.image-logo{
+    width: 150px;
+}
+
+.quotas-detail{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    border:1px solid #a7469a;
+    padding: 16px;
+    border-radius: 4px;
+}
+.quotas-title{    
+    color: #a7469a;
+    font-weight: 600;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.quotas-subtitle{    
+    color: #4e4d4d;
+    font-weight: 600;
+}
+
+.warranty-title{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1em;
+    color: #4caf50;
+}
+
