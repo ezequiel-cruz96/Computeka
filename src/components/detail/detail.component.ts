@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
+import { Store } from '../store/store'
+
 
 @Component({
   selector: 'app-detail',
@@ -7,7 +10,11 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent {
-  constructor(private rutaActiva: ActivatedRoute) { }
+
+  constructor(
+    private rutaActiva: ActivatedRoute,
+    private store: Store
+    ){ }
 
   idParams:any = ''
 
@@ -89,6 +96,10 @@ export class DetailComponent {
     let quotas= Math.round(price /12)
     return quotas.toLocaleString('es-ES', { style: 'currency', currency: 'ARS',  minimumFractionDigits: 0,
     maximumFractionDigits: 0, });
+  }
+
+  addToCart(product: any) {
+    this.store.addToCart(product);
   }
 
 }
