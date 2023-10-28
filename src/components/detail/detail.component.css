@@ -110,7 +110,29 @@
     background-color: red;
 }
 
+.disabled-status{
+    border: 1px solid #4caf50;
+    background-color: #4caf50;
+}
 
+.to-cart{
+    padding: 8px;
+    border: solid 1px #fd611a;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #fd611a;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.cart-button{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
 
 
 

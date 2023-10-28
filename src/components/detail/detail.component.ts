@@ -108,7 +108,7 @@ export class DetailComponent {
 
   addToCart(product: any) {
     this.store.addToCart(product);
-    this.messageService.add({ severity: 'success', summary: 'Computeka', detail: 'Producto agregado alcarrito' });
+    this.messageService.add({ severity: 'success', summary: '', detail: 'Producto agregado al carrito' });
   }
 
   items = this.store.getItems();

@@ -47,7 +47,13 @@
                             Envios a todo el pais</div>
                     </div>
                     <div class="line"></div>
-                    <button class="button-detail" [disabled]="hasProduct" (click)="addToCart(product)">{{TitleButton}}</button>
+                    <div class="cart-button">
+                        <button class="button-detail"  [ngClass]="{'disabled-status': hasProduct}" [disabled]="hasProduct" (click)="addToCart(product)">
+                            <i *ngIf="hasProduct" class="pi pi-shopping-cart" style="font-size: 1rem;margin-right:8px;margin-top: 4px;"></i>
+                            {{TitleButton}}
+                        </button>
+                        <p *ngIf="hasProduct" class="to-cart" [routerLink]="['/carrito']">Ir al carrito</p>
+                    </div>
                     <div class="toast-detail">
                         <p-toast></p-toast>
                     </div>
