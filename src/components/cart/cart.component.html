@@ -1,0 +1,13 @@
+<div class="cart">
+    <h1>Carrito de compras</h1>
+<div  *ngFor="let products of productsCart; let i = index" class="cart-wrapper bb-row">
+    <img [src]="products.images"  alt="" class="cart-image">
+    <p class="cart-name">{{products.name}}</p>
+    <div class="bb-row">
+        <button class="button-cart" (click)="restoreCart(i)">-</button>
+        <p>{{products.count}}</p>
+        <button class="button-cart" (click)="addCart(i)">+</button>
+    </div>
+    <p>{{products.price}}</p>
+</div>
+</div>

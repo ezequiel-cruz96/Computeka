@@ -16,6 +16,7 @@ import { ProductsComponent } from '../components/products/products.component';
 import { DetailComponent } from 'src/components/detail/detail.component';
 import { HelpviewComponent } from 'src/components/helpview/helpview.component';
 import { UsviewComponent } from 'src/components/usview/usview.component';
+import { CartComponent } from '../components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UsviewComponent } from 'src/components/usview/usview.component';
     DetailComponent,
     HelpviewComponent,
     UsviewComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
