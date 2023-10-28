@@ -63,3 +63,7 @@
 .title-cart{
     margin-top: 16px;
 }
+
+.cart-empty{
+    margin-bottom: 700px;
+}

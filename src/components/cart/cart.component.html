@@ -1,14 +1,19 @@
 <div class="cart">
     <h1 class="title-cart">Carrito de compras</h1>
-<div *ngFor="let products of productsCart; let i = index" class="cart-wrapper bb-row">
-    <img [src]="products.images"  alt="" class="cart-image">
-    <p class="cart-name">{{products.name}}</p>
-    <div class="bb-row">
-        <button class="button-cart" (click)="restoreCart(i)">-</button>
-        <p class="button-count">{{products.count}}</p>
-        <button class="button-cart" (click)="addCart(i)">+</button>
+    <div *ngIf="productsCart.length;" >
+    <div  *ngFor="let products of productsCart; let i = index" class="cart-wrapper bb-row">
+        <img [src]="products.images"  alt="" class="cart-image">
+        <p class="cart-name">{{products.name}}</p>
+        <div class="bb-row">
+            <button class="button-cart" (click)="restoreCart(i)">-</button>
+            <p class="button-count">{{products.count}}</p>
+            <button class="button-cart" (click)="addCart(i)">+</button>
+        </div>
+        <p class="price-cart">$ {{formatedPrice(products.price)}}</p>
+        <i class="pi pi-trash" (click)="trash(products.id)" style="font-size:1.2rem;color: red;margin-left: 10px;cursor: pointer;"></i>
     </div>
-    <p class="price-cart">$ {{formatedPrice(products.price)}}</p>
-    <i class="pi pi-trash" (click)="trash(products.id)" style="font-size:1.2rem;color: red;margin-left: 10px;cursor: pointer;"></i>
-</div>
+    </div>
+    <div *ngIf="productsCart.length<3"  class="cart-empty">
+    </div>
+
 </div>
