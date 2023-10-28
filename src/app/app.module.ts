@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { FooterComponent } from 'src/components/footer/footer.component';
+import { ToastModule } from 'primeng/toast';
+
 
 import { TableModule } from 'primeng/table';
 import { ProductsComponent } from '../components/products/products.component';
@@ -17,6 +19,9 @@ import { DetailComponent } from 'src/components/detail/detail.component';
 import { HelpviewComponent } from 'src/components/helpview/helpview.component';
 import { UsviewComponent } from 'src/components/usview/usview.component';
 import { CartComponent } from '../components/cart/cart.component';
+
+import { MessageService } from 'primeng/api';
+
 
 @NgModule({
   declarations: [
@@ -37,10 +42,10 @@ import { CartComponent } from '../components/cart/cart.component';
     BrowserAnimationsModule,
     CarouselModule,
     ButtonModule,
-    TableModule
-    
+    TableModule,
+    ToastModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

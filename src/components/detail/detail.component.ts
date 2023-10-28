@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Store } from '../store/store'
 
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-detail',
@@ -13,7 +14,8 @@ export class DetailComponent {
 
   constructor(
     private rutaActiva: ActivatedRoute,
-    private store: Store
+    private store: Store,
+    private messageService: MessageService
     ){ }
 
   idParams:any = ''
@@ -104,6 +106,7 @@ export class DetailComponent {
 
   addToCart(product: any) {
     this.store.addToCart(product);
+    this.messageService.add({ severity: 'success', summary: 'Computeka', detail: 'Producto agregado alcarrito' });
   }
 
 }
