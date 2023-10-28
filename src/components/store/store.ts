@@ -10,7 +10,9 @@ export class Store {
   items: any[] = [];
 
   addToCart(product: any) {
+    if (!this.items.includes(product)) {
     this.items.push(product);
+    }
   }
   
   getItems() {

@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Store } from '../store/store'
 
 import { MessageService } from 'primeng/api';
+import { compileNgModule } from '@angular/compiler';
 
 @Component({
   selector: 'app-detail',
@@ -104,9 +105,19 @@ export class DetailComponent {
     maximumFractionDigits: 0, });
   }
 
+
   addToCart(product: any) {
     this.store.addToCart(product);
     this.messageService.add({ severity: 'success', summary: 'Computeka', detail: 'Producto agregado alcarrito' });
   }
 
+  items = this.store.getItems();
+
+  get hasProduct(){
+    return this.items.find(producto => producto.id == this.idParams)
+  }
+
+  get TitleButton(){
+    return !this.hasProduct ? "Agregar a carrito":"Producto Agregado al carrito"
+  }
 }
