@@ -3,3 +3,62 @@
     display: flex;
     justify-content: center;
 }
+
+.produc-wrapper{
+    margin-top: 64px;
+    margin-left: 115px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.card-product{
+    border-radius: 8px;
+    border: 1px solid rgb(232, 232, 232);
+    border-bottom:none ;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    
+    align-items: center;
+    gap: 50px;
+    margin-right: 32px;
+    padding: 16px;
+    width: 700px;
+}
+
+.image-product{
+    width: 200px;
+}
+
+.button-detail{
+    padding: 8px;
+    border: solid 1px #fd611a;
+    border-radius: 8px;
+    width: 150px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #fd611a;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.bb-row{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.bb-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+.price-product{
+    font: 500 32px/36px Montserrat,sans-serif!important;
+    color: #4675b9!important;
+    display: flex;
+    
+}
+

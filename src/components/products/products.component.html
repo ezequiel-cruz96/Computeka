@@ -7,4 +7,16 @@
           alt="logo"
         ></p-image>
       </div>
+      <div class="produc-wrapper">
+      <div *ngFor="let product of products" class="card-product">
+        <div class="bb-row">
+          <img [src]="product.images" alt="" class="image-product">
+            <div class="bb-column">
+              <p>{{product.name}}</p>
+              <p class="price-product">{{formatedPrice(product.price)}}</p>
+              <button class="button-detail">Sumar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
