@@ -35,7 +35,8 @@ export class DetailComponent {
       detailImage:[
         {image:'./assets/images/detail_1_2.jpg'},
         {image:'./assets/images/detail_1_3.jpg'}
-      ]
+      ],
+      count:0
       },
     {
       id:2,
@@ -49,7 +50,8 @@ export class DetailComponent {
         {image:'./assets/images/detail_2_1.jpg'},
         {image:'./assets/images/detail_2_2.jpg'},
         {image:'./assets/images/detail_2_3.jpg'}
-      ]
+      ],
+      count:0
     }
     ,
     {
@@ -63,7 +65,8 @@ export class DetailComponent {
       detailImage:[
         {image:'./assets/images/detail_3_1.jpg'},
         {image:'./assets/images/detail_3_2.jpg'},
-      ]
+      ],
+      count:0
     }
     ,
     {
@@ -78,7 +81,8 @@ export class DetailComponent {
         {image:'./assets/images/detail_4_1.jpg'},
         {image:'./assets/images/detail_4_2.jpg'},
         {image:'./assets/images/detail_4_3.jpg'}
-      ]
+      ],
+      count:0
     }
   ]
 

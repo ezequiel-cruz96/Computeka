@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { Store } from '../store/store'
 
 @Component({
   selector: 'app-cart',
@@ -7,7 +8,13 @@ import { Component, signal } from '@angular/core';
 })
 export class CartComponent {
 
-  productsCart:any=[
+  constructor(
+    private store: Store
+  ) { }
+
+  productsCart = this.store.getItems();
+
+/*   productsCart:any=[
     {
       id:1,
       name:"Notebook Gamer Asus ROG Zephyrus G14 QHD 14 Ryzen 7 4800HS 16GB (2x8GB) 512GB SSD NVMe GTX 1650 W10 120Hz",
@@ -70,7 +77,7 @@ export class CartComponent {
       count:0
     }
   ]
-  
+   */
   
   count :any = []
 
