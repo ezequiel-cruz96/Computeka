@@ -83,4 +83,17 @@ export class CartComponent {
     this.productsCart[index].count = this.productsCart[index].count-1;
   }
 }
+
+trash(id:number){
+  let  index = this.productsCart.findIndex((product: { id: number; }) => product.id === id);
+  if (index !== -1) {
+    this.productsCart.splice(index, 1);
+  }
+}
+
+formatedPrice(price :any) {
+  return price.toLocaleString('es-ES', { style: 'currency', currency: 'ARS',minimumFractionDigits: 0,
+  maximumFractionDigits: 0, });
+}
+
 }

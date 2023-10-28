@@ -15,6 +15,11 @@
     border-left: 10px solid #fd611a;
     display: flex;
     align-items: center;
+    gap: 50px;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cart{
@@ -22,12 +27,39 @@
 }
 
 .cart-name{
-    width: 700px;
+    width: 650px;
 }
 
 .button-cart{
     width: 50px;
     padding: 8px;
     background-color: white;
-    border: 1px solid rgb(189, 187, 187);;
+    border: 1px solid hsla(0,0%,86.7%,.34901960784313724);
+    height: 50px;
+    font-size: 24px;
+}
+
+.button-count{
+    width: 50px;
+    padding: 8px;
+    background-color: white;
+    border: 1px solid hsla(0,0%,86.7%,.34901960784313724);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fd611a;
+    height: 50px;
+}
+
+.price-cart{
+    font: 500 32px/36px Montserrat,sans-serif!important;
+    color: #4675b9!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-cart{
+    margin-top: 16px;
 }
