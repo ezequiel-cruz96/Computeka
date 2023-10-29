@@ -36,4 +36,8 @@ formatedPrice(price :any) {
   maximumFractionDigits: 0, });
 }
 
+buyProducts(){
+  /* console.log( "Se guardaron los siguientes productos:" ,this.productsCart) */
+}
+
 }

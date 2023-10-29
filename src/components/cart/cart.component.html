@@ -12,6 +12,7 @@
             <p class="price-cart">$ {{formatedPrice(products.price)}}</p>
             <i class="pi pi-trash" (click)="trash(products.id)" style="font-size:1.2rem;color: red;margin-left: 10px;cursor: pointer;"></i>
         </div>
+        <button class="button-detail" (click)="buyProducts()">Confirmar compra final</button>
     </div>
     <div *ngIf="productsCart.length < 3"  class="cart-empty"></div>
 </div>
