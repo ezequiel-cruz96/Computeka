@@ -15,13 +15,9 @@
               <p>{{product.name}}</p>
               <p class="price-product">{{formatedPrice(product.price)}}</p>
               <div class="cart-button">
-                <button *ngIf="!product.selected" class="button-detail" (click)="addToCart(product)">
-                    Agregar producto al carrito
+                <button *ngIf="!product.selected" class="button-detail" [routerLink]="'/detail/' + product.id">
+                    Ir al detalle
                 </button>
-                <button *ngIf="product.selected" class="button-detail" [ngClass]="{'disabled-status': product.selected}" [disabled]="product.selected">
-                  <i class="pi pi-shopping-cart" style="font-size: 1rem;margin-right:8px;margin-top: 4px;"></i>
-                  Producto Agregado al carrito
-              </button>
             </div>
             <div class="toast-detail">
                 <p-toast></p-toast>
