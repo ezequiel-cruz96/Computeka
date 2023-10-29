@@ -59,6 +59,11 @@
     font: 500 32px/36px Montserrat,sans-serif!important;
     color: #4675b9!important;
     display: flex;
-    
+}
+
+.disabled-status{
+    width: 250px;
+    border: 1px solid #4caf50;
+    background-color: #4caf50;
 }
 

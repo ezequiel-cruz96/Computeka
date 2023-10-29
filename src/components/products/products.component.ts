@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
 
+import { Store } from '../store/store'
+
+import { MessageService } from 'primeng/api';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
+
+  constructor(  
+    private store: Store,
+    private messageService: MessageService
+    ){}
 
   products : any = [
     {
@@ -21,7 +30,8 @@ export class ProductsComponent {
         {image:'./assets/images/detail_1_2.jpg'},
         {image:'./assets/images/detail_1_3.jpg'}
       ],
-      count:0
+      count:0,
+      selected: false
       },
     {
       id:2,
@@ -36,7 +46,8 @@ export class ProductsComponent {
         {image:'./assets/images/detail_2_2.jpg'},
         {image:'./assets/images/detail_2_3.jpg'}
       ],
-      count:0
+      count:0,
+      selected: false
     }
     ,
     {
@@ -51,7 +62,8 @@ export class ProductsComponent {
         {image:'./assets/images/detail_3_1.jpg'},
         {image:'./assets/images/detail_3_2.jpg'},
       ],
-      count:0
+      count:0,
+      selected: false
     }
     ,
     {
@@ -67,13 +79,34 @@ export class ProductsComponent {
         {image:'./assets/images/detail_4_2.jpg'},
         {image:'./assets/images/detail_4_3.jpg'}
       ],
-      count:0
+      count:0,
+      selected: false
     }
   ]
 
   formatedPrice(price :any) {
     return price.toLocaleString('es-ES', { style: 'currency', currency: 'ARS',minimumFractionDigits: 0,
     maximumFractionDigits: 0, });
+  }
+
+
+  items = this.store.getItems();
+
+   hasProduct(id:any){
+    return this.items.find((producto: { id: any; }) => producto.id == id)
+  }
+
+  addToCart(product: any) {
+    const hasProduct = this.products.find((producto: { id: any; }) => producto.id === product.id);
+    if (hasProduct) {
+      hasProduct.selected = true;
+    }
+    this.store.addToCart(product);
+    this.messageService.add({ severity: 'success', summary: '', detail: 'Producto agregado al carrito' });
+  }
+
+  get TitleButton(){
+    return this.hasProduct('') ? "Agregar a carrito":"Producto Agregado al carrito"
   }
 
 }
