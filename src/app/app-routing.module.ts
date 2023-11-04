@@ -6,6 +6,7 @@ import { DetailComponent } from 'src/components/detail/detail.component';
 import { HelpviewComponent } from 'src/components/helpview/helpview.component';
 import { UsviewComponent } from 'src/components/usview/usview.component';
 import { CartComponent } from 'src/components/cart/cart.component';
+import { LoginComponent } from 'src/components/login/login.component';
 
 const routes: Routes = [
   {path:'productos',component:ProductsComponent},
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path:'ayuda',component:HelpviewComponent},
   {path:'nosotros',component:UsviewComponent},
   {path:'carrito',component:CartComponent},
-  {path:'**',component:HomeComponent},
+  {path:'**',component:LoginComponent},
 ];
 
 @NgModule({
