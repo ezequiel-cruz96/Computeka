@@ -21,7 +21,7 @@ import { UsviewComponent } from 'src/components/usview/usview.component';
 import { CartComponent } from '../components/cart/cart.component';
 
 import { MessageService } from 'primeng/api';
-
+import { LogoutComponent } from 'src/components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +34,7 @@ import { MessageService } from 'primeng/api';
     HelpviewComponent,
     UsviewComponent,
     CartComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
