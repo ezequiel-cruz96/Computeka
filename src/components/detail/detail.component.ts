@@ -5,6 +5,8 @@ import { Store } from '../store/store';
 
 import { MessageService } from 'primeng/api';
 
+import { GetProductsService } from 'src/app/get-products.service';
+
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -14,16 +16,28 @@ export class DetailComponent {
   constructor(
     private rutaActiva: ActivatedRoute,
     private store: Store,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private servicio: GetProductsService
   ) {}
 
   idParams: any = '';
 
+  products: any = [];
+
   ngOnInit() {
     this.idParams = this.rutaActiva.snapshot.params['id'];
+
+    this.servicio.obtenerDatos().subscribe(
+      (data) => {
+        this.products = data.body;
+      },
+      (error) => {
+        console.error('Error al obtener datos', error);
+      }
+    );
   }
 
-  products: any = [
+  /*   products: any = [
     {
       id: 1,
       name: 'Notebook Gamer Asus ROG Zephyrus G14 QHD 14 Ryzen 7 4800HS 16GB (2x8GB) 512GB SSD NVMe GTX 1650 W10 120Hz',
@@ -355,7 +369,7 @@ export class DetailComponent {
       count: 0,
       selected: false,
     },
-  ];
+  ]; */
 
   get filterProducts(): any {
     return this.products.filter(

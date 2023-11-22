@@ -24,8 +24,6 @@ export class ProductsComponent {
     this.servicio.obtenerDatos().subscribe(
       (data) => {
         this.products = data.body;
-        console.log('Datos traidos de json');
-        console.log(this.products);
       },
       (error) => {
         console.error('Error al obtener datos', error);
