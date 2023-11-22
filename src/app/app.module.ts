@@ -12,7 +12,6 @@ import { ButtonModule } from 'primeng/button';
 import { FooterComponent } from 'src/components/footer/footer.component';
 import { ToastModule } from 'primeng/toast';
 
-
 import { TableModule } from 'primeng/table';
 import { ProductsComponent } from '../components/products/products.component';
 import { DetailComponent } from 'src/components/detail/detail.component';
@@ -22,6 +21,8 @@ import { CartComponent } from '../components/cart/cart.component';
 
 import { MessageService } from 'primeng/api';
 import { LogoutComponent } from 'src/components/logout/logout.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,9 +45,10 @@ import { LogoutComponent } from 'src/components/logout/logout.component';
     CarouselModule,
     ButtonModule,
     TableModule,
-    ToastModule
+    ToastModule,
+    HttpClientModule,
   ],
   providers: [MessageService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
