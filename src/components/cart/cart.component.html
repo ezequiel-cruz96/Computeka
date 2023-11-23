@@ -1,18 +1,44 @@
 <div class="cart">
-    <h1 class="title-cart">Carrito de compras</h1>
-    <div *ngIf="productsCart.length;" >
-        <div *ngFor="let products of productsCart; let i = index" class="cart-wrapper bb-row">
-            <img [src]="products.images"  alt="" class="cart-image">
-            <p class="cart-name">{{products.name}}</p>
-            <div class="bb-row">
-                <button class="button-cart" (click)="restoreCart(i)">-</button>
-                <p class="button-count">{{products.count}}</p>
-                <button class="button-cart" (click)="addCart(i)">+</button>
-            </div>
-            <p class="price-cart">$ {{formatedPrice(products.price)}}</p>
-            <i class="pi pi-trash" (click)="trash(products.id)" style="font-size:1.2rem;color: red;margin-left: 10px;cursor: pointer;"></i>
-        </div>
-        <button class="button-detail" (click)="buyProducts()">Confirmar compra final</button>
+  <h1 class="title-cart">Carrito de compras</h1>
+  <div *ngIf="productsCart.length">
+    <div
+      *ngFor="let products of productsCart; let i = index"
+      class="cart-wrapper bb-row"
+    >
+      <img [src]="products.images" alt="" class="cart-image" />
+      <p class="cart-name">{{ products.name }}</p>
+      <div class="bb-row">
+        <button class="button-cart" (click)="restoreCart(i)">-</button>
+        <p class="button-count">{{ products.count }}</p>
+        <button class="button-cart" (click)="addCart(i)">+</button>
+      </div>
+      <p class="price-cart">$ {{ formatedPrice(products.price) }}</p>
+      <i
+        class="pi pi-trash"
+        (click)="trash(products.id)"
+        style="
+          font-size: 1.2rem;
+          color: red;
+          margin-left: 10px;
+          cursor: pointer;
+        "
+      ></i>
     </div>
-    <div *ngIf="productsCart.length < 3"  class="cart-empty"></div>
+    <div style="display: flex; flex-direction: column; margin-top: 8px">
+      <label for=""
+        >Ingrese el su numero de telofono para finalizar la compra.</label
+      >
+      <input type="text" [(ngModel)]="phoneUser" class="input-phone" />
+    </div>
+    <button
+      class="button-detail"
+      (click)="buyProducts()"
+      [disabled]="!phoneUser.length"
+    >
+      Confirmar compra final
+    </button>
+  </div>
+</div>
+<div style="display: flex; flex-direction: column">
+  <div *ngIf="productsCart.length < 3" class="cart-empty"></div>
 </div>

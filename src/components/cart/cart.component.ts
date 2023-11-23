@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { Store } from '../store/store';
 
+import { GetProductsService } from 'src/app/get-products.service';
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent {
-  constructor(private store: Store) {}
+  constructor(private store: Store, private servicio: GetProductsService) {}
 
   productsCart = this.store.getItems();
 
@@ -39,7 +41,23 @@ export class CartComponent {
     });
   }
 
+  phoneUser = '';
+
   buyProducts() {
-    /* Enviar funcion de compra */
+    let getProductsCart = this.productsCart.map((objeto) => objeto.name);
+
+    let productFinal = {
+      name: getProductsCart,
+      phone: this.phoneUser,
+    };
+
+    this.servicio.sendMessage(productFinal).subscribe(
+      (data) => {
+        console.log(data);
+      },
+      (error) => {
+        console.error('Error al obtener datos', error);
+      }
+    );
   }
 }

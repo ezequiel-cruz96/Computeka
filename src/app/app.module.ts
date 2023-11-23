@@ -24,6 +24,8 @@ import { LogoutComponent } from 'src/components/logout/logout.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
     TableModule,
     ToastModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [MessageService],
   bootstrap: [AppComponent],
